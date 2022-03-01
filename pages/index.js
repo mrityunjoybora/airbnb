@@ -19,7 +19,7 @@ export default function Home({ exploreData }) {
       <main className="max-w-7xl mx-auto px-8 sm:px-16 pt-12 sm:pt-16 md:pt-24">
         <section className="">
           <h2
-            className="text-4xl font-semibold pb-10
+            className="text-2xl md:text-3xl lg:text-4xl font-semibold pb-8 sm:pb-10
           "
           >
             Explore Nearby
