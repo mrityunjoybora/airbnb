@@ -26,7 +26,7 @@ function Header() {
       <div className="flex items-center rounded-full px-4 py-2 md:border-2 md:shadow-sm">
         <input
           className="flex-grow
-           outline-none bg-transparent text-sm"
+           outline-none bg-transparent font-semibold"
           type="text"
           placeholder="Start your search"
         />
@@ -36,7 +36,7 @@ function Header() {
       {/* right */}
       <div className="flex items-center justify-end md:justify-evenly lg:justify-end space-x-2 lg:space-x-4 text-gray-500">
         <p
-          className="cursor-pointer hidden md:inline md:pl-4
+          className="cursor-pointer hidden md:inline md:pl-4 font-semibold
         "
         >
           Become a host

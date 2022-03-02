@@ -22,7 +22,7 @@ function LargeCard({ img, title, description, buttonText }) {
         <h3 className="text-4xl w-64 mb-4">{title}</h3>
         <p>{description}</p>
 
-        <button className="mt-4 px-4 py-2 rounded-lg border-2 bg-gray-900 text-sm text-white">{buttonText}</button>
+        <button className="mt-4 px-4 py-2 rounded-lg border-2 bg-gray-900 hover:bg-gray-800 text-sm text-white transition duration-200">{buttonText}</button>
       </div>
     </section>
   );
