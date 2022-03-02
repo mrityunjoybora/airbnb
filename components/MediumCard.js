@@ -3,7 +3,7 @@ import React from "react";
 
 function MediumCard({ img, title }) {
     return (
-      <div className="cursor-pointer hover:scale-105 transform transition duration-300 ease-out hover:bg-gray-100">
+      <div className="cursor-pointer rounded-xl hover:scale-105 transform transition duration-300 ease-out">
         <div className="relative h-80 w-80">
           <Image
             className="rounded-xl"
@@ -14,7 +14,7 @@ function MediumCard({ img, title }) {
           />
         </div>
 
-        <h3 className="text-2xl mt-3">{title}</h3>
+        <h3 className="text-2xl mt-6 sm:mt-4">{title}</h3>
       </div>
     );
 }
