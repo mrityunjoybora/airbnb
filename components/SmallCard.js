@@ -3,12 +3,13 @@ import React from 'react'
 
 function SmallCard({img, location, distance}) {
   return (
-      <div className="flex items-center cursor-pointer hover:bg-gray-100 hover:scale-105 transition-transform duration-200 ease-out space-x-4">
+    <div className="flex items-center cursor-pointer hover:bg-gray-100 hover:scale-105 transition-transform duration-200 ease-out space-x-4">
       {/* left */}
       <div className="relative w-16 h-16">
         <Image
           className="rounded-lg"
           src={img}
+          alt=""
           layout="fill"
           objectFit="container"
         />

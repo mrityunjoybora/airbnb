@@ -5,7 +5,7 @@ function Banner() {
   return (
     <div className="relative h-[700px] sm:h-[600px] md:h-[500px] lg:h-[600px] 2xl:h-[700px]">
       <Image className="rounded-2xl sm:rounded-none"
-        src="https://links.papareact.com/0fm"
+        src="https://links.papareact.com/0fm" alt=""
         layout="fill"
         objectFit="cover"
       />

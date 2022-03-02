@@ -8,6 +8,7 @@ function MediumCard({ img, title }) {
           <Image
             className="rounded-xl"
             src={img}
+            alt=""
             layout="fill"
             objectFit="container"
           />

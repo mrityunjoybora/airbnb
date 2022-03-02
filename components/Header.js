@@ -17,6 +17,7 @@ function Header() {
       <div className="relative h-8 w-28 cursor-pointer">
         <Image
           src="https://links.papareact.com/qd3"
+          alt=""
           layout="fill"
           objectFit="container"
         />
