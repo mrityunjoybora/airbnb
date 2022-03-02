@@ -3,8 +3,8 @@ import Image from 'next/image'
 import Banner from '../components/Banner'
 import Header from '../components/Header'
 import SmallCard from "../components/SmallCard";
-export default function Home({ exploreData }) {
-    
+import MediumCard from "../components/MediumCard";
+export default function Home({ exploreData, cardsData }) {
   return (
     <div className="">
       <Head>
@@ -17,16 +17,16 @@ export default function Home({ exploreData }) {
       <Banner />
 
       <main className="max-w-7xl mx-auto px-8 sm:px-16 pt-12 sm:pt-16 md:pt-24">
-        <section className="">
+        <section className="py-4">
           <h2
-            className="text-2xl md:text-3xl lg:text-4xl font-semibold pb-8 sm:pb-10
+            className="text-2xl  lg:text-3xl font-semibold pb-8 sm:pb-10
           "
           >
             Explore Nearby
           </h2>
 
           {/* Pull some data from a server - API endpoints are already made */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {exploreData.map((item) => (
               <SmallCard
                 key={item.img}
@@ -34,6 +34,18 @@ export default function Home({ exploreData }) {
                 location={item.location}
                 distance={item.distance}
               />
+            ))}
+          </div>
+        </section>
+        <section className="mt-6 sm:mt-8 py-4">
+          <h2 className="text-2xl  lg:text-3xl font-semibold pb-8 sm:pb-10">
+            Live Anywhere
+          </h2>
+
+          {/* Pull some data from a server - API endpoints are already made */}
+          <div className="flex gap-10 overflow-scroll scrollbar-hide p-4 -m-4 ">
+            {cardsData?.map((item) => (
+              <MediumCard key={item.img} img={item.img} title={item.title} />
             ))}
           </div>
         </section>
@@ -48,9 +60,15 @@ export async function getStaticProps() {
     (res) => res.json()
   );
 
+  const res = await fetch("https://links.papareact.com/zp1");
+  
+  const cardsData = await res.json();
+
   return {
     props: {
       exploreData,
+      cardsData,
     },
   };
+
 }
