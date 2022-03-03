@@ -26,46 +26,48 @@ export default function Home({ exploreData, cardsData }) {
         <Banner />
       </div>
 
-      <main className="max-w-7xl mx-auto px-8 sm:px-16 pt-12 sm:pt-16 md:pt-24">
-        <section className="py-4">
-          <h2
-            className="text-2xl  lg:text-3xl font-semibold pb-8 sm:pb-10
+      <main className="max-w-7xl mx-auto px-4 sm:px-8  ">
+        <div className="px-4 sm:px-8 shadow-lg rounded-lg pt-6 mt-6 sm:pt-8 sm:mt-8 md:pt-12 md:mt-12 pb-6 mb-6 sm:pb-8 sm:mb-8 md:pb-12 md:mb-12">
+          <section className="py-4">
+            <h2
+              className="text-2xl  lg:text-3xl font-semibold pb-8 sm:pb-10
           "
-          >
-            Explore Nearby
-          </h2>
+            >
+              Explore Nearby
+            </h2>
 
-          {/* Pull some data from a server - API endpoints are already made */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {exploreData.map((item) => (
-              <SmallCard
-                key={item.img}
-                img={item.img}
-                location={item.location}
-                distance={item.distance}
-              />
-            ))}
-          </div>
-        </section>
-        <section className="mt-6 sm:mt-8 py-4">
-          <h2 className="text-2xl  lg:text-3xl font-semibold pb-8 sm:pb-10">
-            Live Anywhere
-          </h2>
+            {/* Pull some data from a server - API endpoints are already made */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+              {exploreData.map((item) => (
+                <SmallCard
+                  key={item.img}
+                  img={item.img}
+                  location={item.location}
+                  distance={item.distance}
+                />
+              ))}
+            </div>
+          </section>
+          <section className="mt-6 sm:mt-8 py-4">
+            <h2 className="text-2xl  lg:text-3xl font-semibold pb-8 sm:pb-10">
+              Live Anywhere
+            </h2>
 
-          {/* Pull some data from a server - API endpoints are already made */}
-          <div className="flex gap-6 sm:gap-10 overflow-scroll scrollbar-hide p-4 -m-4 ">
-            {cardsData?.map((item) => (
-              <MediumCard key={item.img} img={item.img} title={item.title} />
-            ))}
-          </div>
-        </section>
+            {/* Pull some data from a server - API endpoints are already made */}
+            <div className="flex gap-6 sm:gap-10 overflow-scroll scrollbar-hide p-4 -m-4 ">
+              {cardsData?.map((item) => (
+                <MediumCard key={item.img} img={item.img} title={item.title} />
+              ))}
+            </div>
+          </section>
 
-        <LargeCard
-          img="https://links.papareact.com/4cj"
-          title="The Greatest Outdoors"
-          description="Wishlists curated by Airbnb."
-          buttonText="Get Inspired"
-        />
+          <LargeCard
+            img="https://links.papareact.com/4cj"
+            title="The Greatest Outdoors"
+            description="Wishlists curated by Airbnb."
+            buttonText="Get Inspired"
+          />
+        </div>
       </main>
       <Footer />
     </div>
