@@ -42,10 +42,10 @@ function Header() {
         >
           Become a host
         </p>
-        <GlobeAltIcon className="cursor-pointer h-6" />
-        <div className="flex items-center space-x-2 border-2 rounded-full p-2">
+        <GlobeAltIcon className="cursor-pointer h-6 hidden sm:block" />
+        <div className="flex items-center space-x-2 sm:border-2 rounded-full p-2">
           <MenuIcon className="h-6 cursor-pointer" />
-          <UserIcon className="h-6 cursor-pointer" />
+          <UserIcon className="h-6 cursor-pointer hidden sm:block" />
         </div>
       </div>
     </header>
