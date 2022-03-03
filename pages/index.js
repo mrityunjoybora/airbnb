@@ -27,7 +27,7 @@ export default function Home({ exploreData, cardsData }) {
       </div>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-8  ">
-        <div className="px-4 sm:px-8 shadow-lg rounded-lg pt-6 mt-6 sm:pt-8 sm:mt-8 md:pt-12 md:mt-12 pb-6 mb-6 sm:pb-8 sm:mb-8 md:pb-12 md:mb-12">
+        <div className="px-4 sm:px-8 shadow-md rounded-lg pt-6 mt-6 sm:pt-8 sm:mt-8 md:pt-12 md:mt-12 pb-6 mb-6 sm:pb-8 sm:mb-8 md:pb-12 md:mb-12">
           <section className="py-4">
             <h2
               className="text-2xl  lg:text-3xl font-semibold pb-8 sm:pb-10
