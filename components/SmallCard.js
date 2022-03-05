@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
-function SmallCard({img, location, distance}) {
+function SmallCard({ img, location, distance }) {
   return (
     <div className="flex items-center cursor-pointer hover:bg-gray-100 hover:scale-105 transition-transform duration-200 ease-out space-x-4">
       {/* left */}
@@ -24,4 +24,4 @@ function SmallCard({img, location, distance}) {
   );
 }
 
-export default SmallCard
+export default SmallCard;

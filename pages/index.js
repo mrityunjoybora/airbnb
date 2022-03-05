@@ -1,11 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Banner from '../components/Banner'
-import Header from '../components/Header'
+import Head from "next/head";
+import Image from "next/image";
+import Banner from "../components/Banner";
+import Header from "../components/Header";
 import SmallCard from "../components/SmallCard";
 import MediumCard from "../components/MediumCard";
-import LargeCard from '../components/LargeCard';
-import Footer from '../components/Footer';
+import LargeCard from "../components/LargeCard";
+import Footer from "../components/Footer";
 export default function Home({ exploreData, cardsData }) {
   return (
     <div className="">
@@ -74,14 +74,13 @@ export default function Home({ exploreData, cardsData }) {
   );
 }
 
-
 export async function getStaticProps() {
   const exploreData = await fetch("https://links.papareact.com/pyp").then(
     (res) => res.json()
   );
 
   const res = await fetch("https://links.papareact.com/zp1");
-  
+
   const cardsData = await res.json();
 
   return {
@@ -90,5 +89,4 @@ export async function getStaticProps() {
       cardsData,
     },
   };
-
 }

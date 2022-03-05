@@ -14,7 +14,7 @@ function LargeCard({ img, title, description, buttonText }) {
         <Image
           className="rounded-2xl "
           src={img}
-          alt="" 
+          alt=""
           layout="fill"
           objectFit="cover"
         />
