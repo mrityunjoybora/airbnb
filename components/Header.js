@@ -72,7 +72,7 @@ function Header( { placeholder}) {
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
           className="flex-grow
-           outline-none bg-transparent text-sm text-center"
+           outline-none bg-transparent text-sm"
           type="text"
           placeholder={placeholder || "Start your search"}
         />
@@ -121,15 +121,18 @@ function Header( { placeholder}) {
               />
             </div>
           </div>
-          <div className="flex justify-around">
+          <div className="flex justify-around gap-x-2">
             <button
               onClick={resetInput}
-              className=" flex-grow text-gray-500
+              className=" flex-grow py-1 text-gray-500 border-2 rounded-2xl hover:shadow-sm hover:bg-gray-100 active:scale-95 transition duration-100 ease-outout
             "
             >
               Cancel
             </button>
-            <button className="flex-grow text-red-500" onClick={search}>
+            <button
+              className="flex-grow py-1 text-red-500 border-2 rounded-2xl hover:shadow-sm hover:bg-gray-100 active:scale-95 transition duration-100 ease-outout"
+              onClick={search}
+            >
               Search
             </button>
           </div>
