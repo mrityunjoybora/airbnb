@@ -12,7 +12,7 @@ import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
 
-function Header() {
+function Header( { placeholder}) {
   const [searchInput, setSearchInput] = useState("");
 
   const [startDate, setStartDate] = useState(new Date());
@@ -54,7 +54,10 @@ function Header() {
     "
     >
       {/* left */}
-      <div className="relative h-8 w-28 cursor-pointer">
+      <div
+        onClick={() => router.push("/")}
+        className="relative h-8 w-28 cursor-pointer"
+      >
         <Image
           src="https://links.papareact.com/qd3"
           alt=""
@@ -64,16 +67,19 @@ function Header() {
       </div>
 
       {/* middle */}
-      <div className="flex items-center rounded-full px-4 py-2 md:border-2 md:shadow-sm">
+      <div className="flex items-center rounded-full px-3 py-2 md:border-2 md:shadow-sm">
         <input
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
           className="flex-grow
-           outline-none bg-transparent"
+           outline-none bg-transparent text-sm"
           type="text"
-          placeholder="Start your search"
+          placeholder={placeholder || "Start your search"}
         />
-        <SearchIcon className="h-8 bg-red-400 rounded-full p-2 text-white cursor-pointer hidden md:inline-flex " />
+        <SearchIcon
+          className="h-8 bg-red-400 rounded-full p-2 text-white cursor-pointer hidden md:inline-flex "
+          onClick={search}
+        />
       </div>
 
       {/* right */}
