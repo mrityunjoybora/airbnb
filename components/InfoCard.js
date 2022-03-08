@@ -26,11 +26,11 @@ function InfoCard({
         />
       </div>
       <div className="flex flex-col flex-1">
-        <div className="flex justify-between pb-2 sm:pb-1">
-          <p>{location}</p>
-          <HeartIcon className="h-7 cursor-pointer" />
+        <div className="flex justify-between pb-2 sm:pb-1 gap-x-1">
+          <p className="text-sm">{location}</p>
+          <HeartIcon className="h-7 cursor-pointer active:scale-95 active:text-red-400 transition duration-200 ease-out" />
         </div>
-        <h4 className="text-xl">{title}</h4>
+        <h4 className="sm:text-lg" >{title}</h4>
         <div className="border-b w-10 pt-2"></div>
         <div className="flex-grow">
           <p className="text-sm pt-2  text-gray-500">{description}</p>

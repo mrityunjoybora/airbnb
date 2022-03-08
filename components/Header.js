@@ -72,7 +72,7 @@ function Header( { placeholder}) {
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
           className="flex-grow
-           outline-none bg-transparent text-sm"
+           outline-none bg-transparent text-sm text-center"
           type="text"
           placeholder={placeholder || "Start your search"}
         />
