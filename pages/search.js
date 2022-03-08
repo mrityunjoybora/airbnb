@@ -5,7 +5,11 @@ import InfoCard from "../components/InfoCard";
 import { useRouter } from "next/router";
 import { format } from "date-fns";
 
+<<<<<<< HEAD
 function Search({ searchResults }) {
+=======
+function Search() {
+>>>>>>> 1518c914345166c686ba22b398d7d953d230b348
   const router = useRouter();
 
   const { location, startDate, endDate, noOfGuests } = router.query;
@@ -13,11 +17,18 @@ function Search({ searchResults }) {
   const formattedStartDate = format(new Date(startDate), "dd-MMMM-yy");
   const formattedEndDate = format(new Date(endDate), "dd-MMMM-yy");
   const range = `${formattedStartDate} - ${formattedEndDate}`;
+<<<<<<< HEAD
   
 
   return (
     <div>
       <Header placeholder={`${location} | ${range} | ${noOfGuests}`} />
+=======
+
+  return (
+    <div>
+      <Header />
+>>>>>>> 1518c914345166c686ba22b398d7d953d230b348
       <main className="flex-grow pt-14 px-6">
         <section>
           <p className="text-sm">
@@ -33,6 +44,7 @@ function Search({ searchResults }) {
             <p className="button">Rooms and Beds</p>
             <p className="button">More filters</p>
           </div>
+<<<<<<< HEAD
 
           <div>
             {searchResults.map((item) => (
@@ -50,6 +62,8 @@ function Search({ searchResults }) {
               />
             ))}
           </div>
+=======
+>>>>>>> 1518c914345166c686ba22b398d7d953d230b348
         </section>
       </main>
       <Footer />
@@ -58,6 +72,7 @@ function Search({ searchResults }) {
 }
 
 export default Search;
+<<<<<<< HEAD
 
 export async function getServerSideProps() { 
   const res = await fetch("https://links.papareact.com/isz");
@@ -69,3 +84,5 @@ export async function getServerSideProps() {
     },
   };
 }
+=======
+>>>>>>> 1518c914345166c686ba22b398d7d953d230b348
