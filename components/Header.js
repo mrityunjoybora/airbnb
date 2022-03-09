@@ -46,6 +46,7 @@ function Header( { placeholder}) {
         noOfGuests,
       },
     });
+    setSearchInput("");
   };
 
   return (
@@ -124,13 +125,13 @@ function Header( { placeholder}) {
           <div className="flex justify-around gap-x-2">
             <button
               onClick={resetInput}
-              className=" flex-grow py-1 text-gray-500 border-2 rounded-2xl hover:shadow-sm hover:bg-gray-100 active:scale-95 transition duration-100 ease-outout
+              className=" flex-grow py-1 text-gray-500 border-2 rounded-2xl hover:shadow-sm hover:bg-red-400 hover:text-white active:scale-95 transition duration-100 ease-outout
             "
             >
               Cancel
             </button>
             <button
-              className="flex-grow py-1 text-red-500 border-2 rounded-2xl hover:shadow-sm hover:bg-gray-100 active:scale-95 transition duration-100 ease-outout"
+              className="flex-grow py-1 text-red-500 border-2 rounded-2xl hover:shadow-sm hover:bg-red-400 hover:text-white active:scale-95 transition duration-100 ease-outout"
               onClick={search}
             >
               Search
@@ -143,3 +144,5 @@ function Header( { placeholder}) {
 }
 
 export default Header;
+
+
