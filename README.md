@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Important Note
+Google thinks I’m phishing, so you might have to bypass the Deceptive Site Ahead warning by clicking on details -> visit this unsafe site.
+
+![Alt text](/Deceptive-Site-Ahead-warning.png?raw=true "Optional Title")
+
+
 ## Screenshot
 /home
 
