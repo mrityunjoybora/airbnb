@@ -1,5 +1,14 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Screenshot
+/home
+
+![Alt text](/aribnb-ss1.png?raw=true "Optional Title")
+
+/search
+
+![Alt text](/airbnb-ss2.png?raw=true "Optional Title")
+
 ## Getting Started
 
 First, run the development server:
